@@ -1,10 +1,5 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: [
-    "./src/hello_world_react_frontend/index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-    './src/*.{js,jsx}',
-  ],
+export default {
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -20,6 +15,5 @@ module.exports = {
         'body': ['Circular Std', 'sans']
       }
     },
-  },
-  plugins: [],
+  }
 }
