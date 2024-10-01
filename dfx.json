@@ -1,12 +1,15 @@
 {
   "canisters": {
     "backend": {
-      "main": "../backend/main.mo",
-      "type": "motoko"
+      "main": "backend/main.mo",
+      "type": "motoko",
+      "declarations": {
+        "output": "src/declarations/backend"
+      }
     },
     "frontend": {
       "dependencies": ["backend"],
-      "source": ["./declarations"],
+      "source": ["frontend/dist"],
       "type": "assets"
     }
   },

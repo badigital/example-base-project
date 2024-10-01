@@ -3,12 +3,16 @@ import { defineConfig } from 'vite';
 import environment from 'vite-plugin-environment';
 
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     environment("all", { prefix: "CANISTER_" }),
     environment("all", { prefix: "DFX_" }),
   ],
-  envDir: '.',
+  envDir: '../',
+  define: {
+    'process.env': process.env
+  },
   optimizeDeps: {
     esbuildOptions: {
       define: {

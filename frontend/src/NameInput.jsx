@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import ShowcaseText from "./ShowcaseText";
-import { hello_world_react_backend } from 'declarations/hello_world_react_backend';
+import { backend } from '../../src/declarations/backend';
 
 const NameInput = () => {
     const [greeting, setGreeting] = useState(null);
@@ -9,7 +9,7 @@ const NameInput = () => {
 
     function handleSubmit(event) {
         event.preventDefault();
-        hello_world_react_backend.greet(name).then((newGreeting) => {
+        backend.greet(name).then((newGreeting) => {
             setGreeting(newGreeting);
         });
         return false;
