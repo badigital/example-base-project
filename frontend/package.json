@@ -4,10 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dfx:setup": "dfx generate backend",
-    "prestart": "npm run dfx:setup",
-    "start": "vite",
-    "prebuild": "dfx generate backend",
+    "prebuild": "npm i && dfx generate backend",
     "build": "vite build"
   },
   "dependencies": {

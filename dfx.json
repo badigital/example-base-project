@@ -4,15 +4,27 @@
       "main": "backend/main.mo",
       "type": "motoko",
       "declarations": {
-        "output": "src/declarations/backend"
+        "output": "declarations/backend"
       }
     },
     "frontend": {
-      "dependencies": ["backend"],
-      "source": ["frontend/dist"],
+      "dependencies": [
+        "backend"
+      ],
+      "frontend": {
+        "entrypoint": "frontend/index.html"
+      },
+      "source": [
+        "frontend/dist"
+      ],
       "type": "assets"
     }
   },
-  "output_env_file": ".env",
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
   "version": 1
 }

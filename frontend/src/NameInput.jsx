@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from "framer-motion";
 import ShowcaseText from "./ShowcaseText";
-import { backend } from '../../src/declarations/backend';
+import { backend } from '../declarations/backend';
 
 const NameInput = () => {
     const [greeting, setGreeting] = useState(null);
