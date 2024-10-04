@@ -1,25 +1,5 @@
-# Various IDEs and Editors
-.vscode/
-.idea/
-**/*~
-
-# Mac OSX temporary files
-.DS_Store
-**/.DS_Store
-
-# dfx temporary files
-.dfx/
-
-# declarations
-src
-
-# rust
-target/
-
-# frontend code
+.dfx
+src/declarations
 node_modules/
-dist/
-.svelte-kit/
-
-# environment variables
-.env
+frontend/node_modules/
+frontend/dist/
