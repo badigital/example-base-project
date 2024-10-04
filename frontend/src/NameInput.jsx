@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { motion } from "framer-motion";
 import ShowcaseText from "./ShowcaseText";
 import { backend } from 'declarations/backend';
 
@@ -22,7 +21,7 @@ const NameInput = () => {
 
     return (
         <div className="bg-dark-infinite h-full w-full flex text-white justify-center items-center rounded antialiased font-sans py-8 px-4">
-            <motion.div
+            <div
                 className={"relative w-full max-w-md transition-transform duration-500"}
                 style={{ perspective: "1000px", transformStyle: "preserve-3d" }}
                 initial={{ opacity: 0, y: -50 }}
@@ -58,7 +57,7 @@ const NameInput = () => {
                             </button>
                         </div>
                     </Card>}
-            </motion.div>
+            </div>
         </div >
     );
 };

@@ -1,11 +1,10 @@
 import React from 'react';
-import { motion } from "framer-motion";
 import logo from "../logo2.svg";
 
 const ShowcaseText = () => {
     return (
         <div>
-            <motion.div
+            <div
                 className="bg-white text-black shadow-mg overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -23,7 +22,7 @@ const ShowcaseText = () => {
                                 "A query function that accepts a name",
                                 "A frontend that displays the query function return",
                             ].map((feature, index) => (
-                                <motion.li
+                                <li
                                     key={index}
                                     className="flex items-center space-x-3 text-gray-600"
                                     initial={{ opacity: 0, x: -20 }}
@@ -34,13 +33,13 @@ const ShowcaseText = () => {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                                     </svg>
                                     <span>{feature}</span>
-                                </motion.li>
+                                </li>
                             ))}
                         </ul>
                         <img src={logo} alt="On-chain logo" className="logo w-64 h-24" />
                     </div>
                 </div>
-            </motion.div>
+            </div>
         </div>
     );
 };
