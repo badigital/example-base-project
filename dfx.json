@@ -2,10 +2,7 @@
   "canisters": {
     "backend": {
       "main": "backend/main.mo",
-      "type": "motoko",
-      "declarations": {
-        "output": "declarations/backend"
-      }
+      "type": "motoko"
     },
     "frontend": {
       "dependencies": [
@@ -18,12 +15,6 @@
         "frontend/dist"
       ],
       "type": "assets"
-    }
-  },
-  "defaults": {
-    "build": {
-      "args": "",
-      "packtool": ""
     }
   },
   "version": 1

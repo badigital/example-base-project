@@ -1,5 +1,6 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+import { fileURLToPath, URL } from 'url';
 import environment from 'vite-plugin-environment';
 
 export default defineConfig({
@@ -19,5 +20,15 @@ export default defineConfig({
         global: "globalThis",
       },
     },
-  }
+  },
+  resolve: {
+      alias: [
+          {
+              find: "declarations",
+              replacement: fileURLToPath(
+                  new URL("../src/declarations", import.meta.url)
+              ),
+          },
+      ],
+  },
 });
